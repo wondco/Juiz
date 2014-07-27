@@ -1,11 +1,24 @@
 * Juiz 
+コンシェルジュ的な機能が欲くなるんで書きました。
+こりずに。三度目の正直で。
+
+シンプルなものにするけぇ。
 
 ** Usage
+#+BEGIN_SRC lisp
+> (defparameter *noboru* (make-juiz   "ジュイス"))
+> (defparameter *juiz*   (make-slecao "滝沢朗"))
+> (do-misson (request *noboru* *juiz* (+ 1 2)))
+#<SB-THREAD:THREAD "From juiz. 2014-7-27 21:18:54 (-9) enterd" FINISHED values: #<MISSION{1009668313}> {1009668723}>
+#+END_SRC
 
 ** Dependencies
 
 ** Installation
-
+#+BEGIN_SRC lisp
+(asdf:load-system 'juiz)
+(in-package :juiz)
+#+END_SRC
 
 ** Author
 
@@ -14,7 +27,6 @@
 * Copyright
 
 Copyright (c) 2014 Satoshi Iwasaki (yanqirenshi@gmail.com)
-
 
 * License
 
