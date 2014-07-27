@@ -1,10 +1,10 @@
 #|
-  This file is a part of juiz project.
-  Copyright (c) 2014 Satoshi Iwasaki (yanqirenshi@gmail.com)
+This file is a part of juiz project.
+Copyright (c) 2014 Satoshi Iwasaki (yanqirenshi@gmail.com)
 |#
 
 #|
-  Author: Satoshi Iwasaki (yanqirenshi@gmail.com)
+Author: Satoshi Iwasaki (yanqirenshi@gmail.com)
 |#
 
 (in-package :cl-user)
@@ -21,8 +21,12 @@
                :upanishad
                :shinrabanshou)
   :components ((:module "src"
-                :components
-                ((:file "juiz"))))
+                        :components
+                        ((:file "package")
+                         (:file "class"    :depends-on ("package"))
+                         (:file "freewill" :depends-on ("class"))
+                         (:file "juiz"     :depends-on ("freewill"))
+                         )))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
