@@ -14,7 +14,7 @@
          :initarg  :name)))
 
 
-(defclass juiz (exit freewill)
+(defclass concierge (exit freewill)
   ((mission-list :documentation ""
                  :accessor get-mission-list
                  :initform nil
@@ -26,10 +26,10 @@
 
 
 (defclass mission ()
-  ((juiz :documentation ""
-         :accessor get-juiz
-         :initform nil
-         :initarg  :juiz)
+  ((concierge :documentation ""
+              :accessor get-concierge
+              :initform nil
+              :initarg  :concierge)
    (slecao :documentation ""
            :accessor get-slecao
            :initform nil
